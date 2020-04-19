@@ -1,5 +1,7 @@
 push = require 'push'
 
+Class = 'class'
+
 WINDOW_WIDTH = 1280
 WINDOW_HEIGHT = 800
 
@@ -28,8 +30,7 @@ function love.load()
 		resizable = false,
 	})
 
-	player1X = 50
-	player1Y =  VIRTUAL_HEIGHT / 2
+	Player1:reset()
 
 	PLAYER_SPEED = 300
 
@@ -67,7 +68,7 @@ function love.draw()
 	love.graphics.clear(56/255,140/255,180/255, 111/255)
 	love.graphics.setFont(largeFont)
 	love.graphics.printf('Back to the Future', 0, 20, VIRTUAL_WIDTH, 'center')
-
+	love.graphics.setColor(0/255, 0/255, 255/255, 255/255)
 	love.graphics.rectangle('fill', player1X, player1Y, 40, 40)
 
 
